@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   loginMail() { 
     this.auth.logMail(this.usuario.email, this.usuario.pass).then((res) => {
       console.log(res);
-      this.router.navigate(['/pedidos']);
+      this.router.navigate(['pedidos']);
     })
     .catch((err)=> console.log("Error" +  err))
   }

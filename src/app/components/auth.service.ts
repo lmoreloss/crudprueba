@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   logOut() { 
-    this._fireBaseAuth.signOut().then((res) => this.router.navigate(['/login']));
+    this._fireBaseAuth.signOut().then((res) => this.router.navigate(['login']));
   }
 
   logMail(email, password) { 
