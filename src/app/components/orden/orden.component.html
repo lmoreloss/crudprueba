@@ -1,0 +1,28 @@
+<form [formGroup]="this._ordenesServicio.form">
+    <input placeholder="Numero Orden"
+    formControlName = "numOrden"
+    type="text"
+    class="input-field col s12">
+    <input placeholder="Nombre Cliente"
+    formControlName = "nombreCliente"
+    type="text"
+    class="input-field col s12">
+
+    <button class="waves-effect waves-light btn col s4" *ngFor="let cafe of cafes" (click)="anadirCafe(cafe)">
+        {{cafe}}
+    </button>
+
+    <ul class="collection">
+        <li *ngFor="let cafe of ordenCafe">
+            <span class="col s11">{{cafe}}</span>
+            <a class="col s1" (click)="removerCafe(cafe)">x</a>
+        </li>
+    </ul>
+
+    <button class="waves-effect waves-light btn col s12" (click)="onSubmit()">Enviar</button>
+
+</form>
+<br>
+<br>
+<button class="waves-effect waves-dark btn col s12" (click)="logout()">Cerrar Sesion</button>
+

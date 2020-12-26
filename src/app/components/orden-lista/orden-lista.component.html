@@ -1,0 +1,33 @@
+<table>
+    <thead>
+      <tr>
+        <th>Numero Orden</th>
+        <th>Cliente</th>
+        <th>Cafe</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let orden of ordenes">
+        <td>
+          {{orden.payload.doc.data().numOrden}}
+        </td>
+        <td>
+          {{orden.payload.doc.data().nombreCliente}}
+        </td>
+        <td>
+          <span *ngFor="let cafe of orden.payload.doc.data().ordenCafe">
+            {{cafe}}
+          </span>
+        </td>
+        <td [hidden]="orden.payload.doc.data().completado" 
+        (click)="marcarCompleto(orden)">
+          <i class="material-icons">check</i>
+        </td>
+        <td [hidden]="orden.payload.doc.data().completed" 
+        (click)="borrarOrden(orden)">
+          <i class="material-icons">delete_forever</i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
