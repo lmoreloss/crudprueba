@@ -5,10 +5,10 @@ import { LoginComponent } from './components/login/login.component';
 import { AuuthGuardService } from "./components/auuth-guard.service";
 
 const routes: Routes = [
-  { path: "pedidos", component: HomeComponent, canActivate: [AuuthGuardService]},
-  { path: "login", component: LoginComponent },
-  { path: "", pathMatch: "full", redirectTo: "login" },
-  { path: "**", pathMatch: "full", redirectTo: "login" },
+  { path: 'pedidos', component: HomeComponent, canActivate: [AuuthGuardService]},
+  { path: 'login', component: LoginComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: '**', pathMatch: 'full', redirectTo: 'login' },
 ];
 
 @NgModule({
