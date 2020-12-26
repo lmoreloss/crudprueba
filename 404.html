@@ -13,8 +13,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Google Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet" />
+
+<script type="text/javascript">
+  // Single Page Apps for GitHub Pages
+  // MIT License
+  // https://github.com/rafgraph/spa-github-pages
+  // This script checks to see if a redirect is present in the query string,
+  // converts it back into the correct url and adds it to the
+  // browser's history using window.history.replaceState(...),
+  // which won't cause the browser to attempt to load the new url.
+  // When the single page app is loaded further down in this file,
+  // the correct url will be waiting in the browser's history for
+  // the single page app to route accordingly.
+  (function(l) {
+    if (l.search[1] === '/' ) {
+      var decoded = l.search.slice(1).split('&').map(function(s) { 
+        return s.replace(/~and~/g, '&')
+      }).join('?');
+      window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+      );
+    }
+  }(window.location))
+</script>
 <link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
 <body>
   <app-root></app-root>
-<script src="runtime.328e1591d85f056a42d3.js" defer></script><script src="polyfills.35a5ca1855eb057f016a.js" defer></script><script src="main.d15119f88c381e4e9c86.js" defer></script></body>
+<script src="runtime.328e1591d85f056a42d3.js" defer></script><script src="polyfills.35a5ca1855eb057f016a.js" defer></script><script src="main.8ce65722b50ab15d523b.js" defer></script></body>
 </html>
