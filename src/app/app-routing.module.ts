@@ -5,7 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuuthGuardService } from "./components/auuth-guard.service";
 
 const routes: Routes = [
-  { path: 'pedidos', component: HomeComponent, canActivate: [AuuthGuardService]},
+  { path: 'pedidos', component: HomeComponent},
   { path: 'login', component: LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: '/login' },
 ];
