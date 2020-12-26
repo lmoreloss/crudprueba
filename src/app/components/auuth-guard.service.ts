@@ -13,7 +13,8 @@ export class AuuthGuardService implements CanActivate {
     if (this.auth.estaLoggeado()) {
       return true;
     } 
-      this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/login');
+    console.log("redir de guard");
       return false;
     
   }
