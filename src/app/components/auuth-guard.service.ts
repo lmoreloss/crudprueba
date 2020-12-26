@@ -13,7 +13,7 @@ export class AuuthGuardService {
     if (this.auth.estaLoggeado()) {
       return true;
     } else {
-      this.router.navigate(["/"]);
+      this.router.navigate(["/login"]);
       return false;
     }
   }
